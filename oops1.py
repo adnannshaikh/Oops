@@ -9,7 +9,14 @@ print(type(()))
 print(type({}))
 print(type({1}))
 
+
+
 # creating a class
 
 class BigObject: #camel cases and first alphabet to be capital so that the programmers know that this is a class
     pass
+
+obj1 = BigObject() #instanciate
+
+
+print(type(obj1))
