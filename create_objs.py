@@ -19,11 +19,18 @@ class PlayerCharacter:
         print("Run")
         return "Done"
 
+    @classmethod
+    def adding_things(cls,num1,num2):
+        return num1 + num2
+
 
 
 player1 = PlayerCharacter('adnan',22)
 player2 = PlayerCharacter('cody',22)
 player2.attack = 200
 
-print(player1.name,player1.age,player1.run())
-print(f"{player2.name}'s attack power is {player2.attack}")
+# print(player1.name,player1.age,player1.run())
+# print(f"{player2.name}'s attack power is {player2.attack}")
+
+
+print(player1.adding_things(20,20))
