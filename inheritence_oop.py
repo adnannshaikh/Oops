@@ -1,9 +1,14 @@
 class User:
+    def __init__(self,email):
+        self.email = email
+
+
     def sign_in(self):
         print('Logged in')
 
 class Wizard(User):
-    def __init__(self,name,power):
+    def __init__(self,name,power,email):
+        super().__init__(email)
         self.name = name
         self.power = power
 
@@ -18,7 +23,8 @@ class Archer(User):
     def attack(self):
         print(f"Attacking with aarrows : arrows left -  {self.arrow}")
 
-wizard1 = Wizard("zozo",50)
+wizard1 = Wizard("zozo",50,'demo@gmail.com')
+
 archer1 = Archer("bell",200)
 # print(wizard1.sign_in())
 wizard1.attack()
@@ -39,3 +45,6 @@ player_attack(archer1)
 print("------------------")
 for char in [wizard1,archer1]:
     char.attack()
+
+
+print(wizard1.email)
